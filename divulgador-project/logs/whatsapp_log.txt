@@ -1,0 +1,177 @@
+[ERRO] Grupo 'Achadinhos-Lili-Telegram' não configurado.
+[ERRO] Grupo 'Achadinhos-Lili-Telegram' não configurado.
+[ERRO] Grupo 'Achadinhos-Lili-Telegram' não configurado.
+[FALHA] Envio para Achadinhos da Lili 002 falhou. Erro: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68803CF25+75717]
+	GetHandleVerifier [0x00007FF68803CF80+75808]
+	(No symbol) [0x00007FF687E08F9A]
+	(No symbol) [0x00007FF687EA2FFD]
+	(No symbol) [0x00007FF687E58A8A]
+	(No symbol) [0x00007FF687E57B72]
+	(No symbol) [0x00007FF687E8737A]
+	(No symbol) [0x00007FF687E51C46]
+	(No symbol) [0x00007FF687E87590]
+	(No symbol) [0x00007FF687EAF39C]
+	(No symbol) [0x00007FF687E87153]
+	(No symbol) [0x00007FF687E50421]
+	(No symbol) [0x00007FF687E511B3]
+	GetHandleVerifier [0x00007FF68833D6FD+3223453]
+	GetHandleVerifier [0x00007FF688337CA2+3200322]
+	GetHandleVerifier [0x00007FF688355AD3+3322739]
+	GetHandleVerifier [0x00007FF6880569FA+180890]
+	GetHandleVerifier [0x00007FF68805E0FF+211359]
+	GetHandleVerifier [0x00007FF688045274+109332]
+	GetHandleVerifier [0x00007FF688045422+109762]
+	GetHandleVerifier [0x00007FF68802BA39+4825]
+	BaseThreadInitThunk [0x00007FFBFC537374+20]
+	RtlUserThreadStart [0x00007FFBFCEDCC91+33]
+
+[FALHA] Envio para Achadinhos da Lili 002 falhou. Erro: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68803CF25+75717]
+	GetHandleVerifier [0x00007FF68803CF80+75808]
+	(No symbol) [0x00007FF687E08F9A]
+	(No symbol) [0x00007FF687EA2FFD]
+	(No symbol) [0x00007FF687E58A8A]
+	(No symbol) [0x00007FF687E57B72]
+	(No symbol) [0x00007FF687E8737A]
+	(No symbol) [0x00007FF687E51C46]
+	(No symbol) [0x00007FF687E87590]
+	(No symbol) [0x00007FF687EAF39C]
+	(No symbol) [0x00007FF687E87153]
+	(No symbol) [0x00007FF687E50421]
+	(No symbol) [0x00007FF687E511B3]
+	GetHandleVerifier [0x00007FF68833D6FD+3223453]
+	GetHandleVerifier [0x00007FF688337CA2+3200322]
+	GetHandleVerifier [0x00007FF688355AD3+3322739]
+	GetHandleVerifier [0x00007FF6880569FA+180890]
+	GetHandleVerifier [0x00007FF68805E0FF+211359]
+	GetHandleVerifier [0x00007FF688045274+109332]
+	GetHandleVerifier [0x00007FF688045422+109762]
+	GetHandleVerifier [0x00007FF68802BA39+4825]
+	BaseThreadInitThunk [0x00007FFBFC537374+20]
+	RtlUserThreadStart [0x00007FFBFCEDCC91+33]
+
+[FALHA] Envio para Achadinhos da Lili 002 falhou. Erro: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68803CF25+75717]
+	GetHandleVerifier [0x00007FF68803CF80+75808]
+	(No symbol) [0x00007FF687E08F9A]
+	(No symbol) [0x00007FF687EA2FFD]
+	(No symbol) [0x00007FF687E58A8A]
+	(No symbol) [0x00007FF687E57B72]
+	(No symbol) [0x00007FF687E8737A]
+	(No symbol) [0x00007FF687E51C46]
+	(No symbol) [0x00007FF687E87590]
+	(No symbol) [0x00007FF687EAF39C]
+	(No symbol) [0x00007FF687E87153]
+	(No symbol) [0x00007FF687E50421]
+	(No symbol) [0x00007FF687E511B3]
+	GetHandleVerifier [0x00007FF68833D6FD+3223453]
+	GetHandleVerifier [0x00007FF688337CA2+3200322]
+	GetHandleVerifier [0x00007FF688355AD3+3322739]
+	GetHandleVerifier [0x00007FF6880569FA+180890]
+	GetHandleVerifier [0x00007FF68805E0FF+211359]
+	GetHandleVerifier [0x00007FF688045274+109332]
+	GetHandleVerifier [0x00007FF688045422+109762]
+	GetHandleVerifier [0x00007FF68802BA39+4825]
+	BaseThreadInitThunk [0x00007FFBFC537374+20]
+	RtlUserThreadStart [0x00007FFBFCEDCC91+33]
+
+[FALHA] Envio para Achadinhos da Lili 002 falhou. Erro: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68803CF25+75717]
+	GetHandleVerifier [0x00007FF68803CF80+75808]
+	(No symbol) [0x00007FF687E08F9A]
+	(No symbol) [0x00007FF687EA2FFD]
+	(No symbol) [0x00007FF687E58A8A]
+	(No symbol) [0x00007FF687E57B72]
+	(No symbol) [0x00007FF687E8737A]
+	(No symbol) [0x00007FF687E51C46]
+	(No symbol) [0x00007FF687E87590]
+	(No symbol) [0x00007FF687EAF39C]
+	(No symbol) [0x00007FF687E87153]
+	(No symbol) [0x00007FF687E50421]
+	(No symbol) [0x00007FF687E511B3]
+	GetHandleVerifier [0x00007FF68833D6FD+3223453]
+	GetHandleVerifier [0x00007FF688337CA2+3200322]
+	GetHandleVerifier [0x00007FF688355AD3+3322739]
+	GetHandleVerifier [0x00007FF6880569FA+180890]
+	GetHandleVerifier [0x00007FF68805E0FF+211359]
+	GetHandleVerifier [0x00007FF688045274+109332]
+	GetHandleVerifier [0x00007FF688045422+109762]
+	GetHandleVerifier [0x00007FF68802BA39+4825]
+	BaseThreadInitThunk [0x00007FFBFC537374+20]
+	RtlUserThreadStart [0x00007FFBFCEDCC91+33]
+
+[FALHA] Envio para Achadinhos da Lili 002 falhou. Erro: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68803CF25+75717]
+	GetHandleVerifier [0x00007FF68803CF80+75808]
+	(No symbol) [0x00007FF687E08F9A]
+	(No symbol) [0x00007FF687EA2FFD]
+	(No symbol) [0x00007FF687E58A8A]
+	(No symbol) [0x00007FF687E57B72]
+	(No symbol) [0x00007FF687E8737A]
+	(No symbol) [0x00007FF687E51C46]
+	(No symbol) [0x00007FF687E87590]
+	(No symbol) [0x00007FF687EAF39C]
+	(No symbol) [0x00007FF687E87153]
+	(No symbol) [0x00007FF687E50421]
+	(No symbol) [0x00007FF687E511B3]
+	GetHandleVerifier [0x00007FF68833D6FD+3223453]
+	GetHandleVerifier [0x00007FF688337CA2+3200322]
+	GetHandleVerifier [0x00007FF688355AD3+3322739]
+	GetHandleVerifier [0x00007FF6880569FA+180890]
+	GetHandleVerifier [0x00007FF68805E0FF+211359]
+	GetHandleVerifier [0x00007FF688045274+109332]
+	GetHandleVerifier [0x00007FF688045422+109762]
+	GetHandleVerifier [0x00007FF68802BA39+4825]
+	BaseThreadInitThunk [0x00007FFBFC537374+20]
+	RtlUserThreadStart [0x00007FFBFCEDCC91+33]
+
+[FALHA] Envio para Achadinhos da Lili 002 falhou. Erro: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=136.0.7103.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68803CF25+75717]
+	GetHandleVerifier [0x00007FF68803CF80+75808]
+	(No symbol) [0x00007FF687E08F9A]
+	(No symbol) [0x00007FF687EA2FFD]
+	(No symbol) [0x00007FF687E58A8A]
+	(No symbol) [0x00007FF687E57B72]
+	(No symbol) [0x00007FF687E8737A]
+	(No symbol) [0x00007FF687E51C46]
+	(No symbol) [0x00007FF687E87590]
+	(No symbol) [0x00007FF687EAF39C]
+	(No symbol) [0x00007FF687E87153]
+	(No symbol) [0x00007FF687E50421]
+	(No symbol) [0x00007FF687E511B3]
+	GetHandleVerifier [0x00007FF68833D6FD+3223453]
+	GetHandleVerifier [0x00007FF688337CA2+3200322]
+	GetHandleVerifier [0x00007FF688355AD3+3322739]
+	GetHandleVerifier [0x00007FF6880569FA+180890]
+	GetHandleVerifier [0x00007FF68805E0FF+211359]
+	GetHandleVerifier [0x00007FF688045274+109332]
+	GetHandleVerifier [0x00007FF688045422+109762]
+	GetHandleVerifier [0x00007FF68802BA39+4825]
+	BaseThreadInitThunk [0x00007FFBFC537374+20]
+	RtlUserThreadStart [0x00007FFBFCEDCC91+33]
+
+[OK] Enviado para WhatsApp - Grupo: Achadinhos da Lili 002
+[OK] Enviado para WhatsApp - Grupo: Achadinhos da Lili 002
+[OK] Enviado para WhatsApp - Grupo: Achadinhos da Lili 002
+[OK] Enviado para WhatsApp - Grupo: Achadinhos da Lili 002
+[OK] Enviado para WhatsApp - Grupo: Achadinhos da Lili 002
+[ERRO] Grupo 'https://s.shopee.com.br/9zl9gFQjum' não configurado.
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
