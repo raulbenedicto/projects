@@ -9,4 +9,4 @@ WHATSAPP_GRUPOS = {
     'Achadinhos da Lili 002': 'Achadinhos da Lili 002'
 }
 
-TEMPO_ENTRE_MENSAGENS = 5  # segundos
+TEMPO_ENTRE_MENSAGENS = 10  # segundos

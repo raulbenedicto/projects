@@ -3,6 +3,10 @@ import time
 import requests
 import os
 from config import TELEGRAM_BOT_TOKEN, CHAT_IDS, TEMPO_ENTRE_MENSAGENS
+from datetime import datetime
+
+#variavel de data e hora
+datetime_now = datetime.now()
 
 # Garantir pasta de logs
 os.makedirs("logs", exist_ok=True)
@@ -17,7 +21,7 @@ def enviar_telegram(ofertas):
         chat_id = CHAT_IDS.get(grupo)
 
         if not chat_id:
-            mensagem_erro = f"[ERRO] Grupo '{grupo}' não configurado.\n"
+            mensagem_erro = f"{datetime_now}[ERRO] Grupo '{grupo}' não configurado.\n"
             print(mensagem_erro)
             log_file.write(mensagem_erro)
             continue
@@ -29,11 +33,11 @@ def enviar_telegram(ofertas):
         response = requests.post(url, data=data)
 
         if response.status_code == 200:
-            msg_ok = f"[OK] Enviado para Telegram - Grupo: {grupo}\n"
+            msg_ok = f"{datetime_now}[OK] Enviado para Telegram - Grupo: {grupo}\n"
             print(msg_ok)
             log_file.write(msg_ok)
         else:
-            msg_fail = f"[FALHA] Não enviado para {grupo}. Status: {response.status_code} - {response.text}\n"
+            msg_fail = f"{datetime_now}[FALHA] Não enviado para {grupo}. Status: {response.status_code} - {response.text}\n"
             print(msg_fail)
             log_file.write(msg_fail)
 

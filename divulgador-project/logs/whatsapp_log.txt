@@ -175,3 +175,109 @@ Stacktrace:
 [OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
 [OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
 [OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+2025-05-14 08:48:21.886552[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+2025-05-14 08:48:21.886552[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+2025-05-14 08:48:21.886552[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+2025-05-14 08:55:43.337806[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+2025-05-14 08:55:43.337806[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+2025-05-14 08:55:43.337806[OK] Mensagem enviada para o grupo: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[FALHA] Erro ao enviar para Achadinhos da Lili 002: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF73B55CF65+75717]
+	GetHandleVerifier [0x00007FF73B55CFC0+75808]
+	(No symbol) [0x00007FF73B328F9A]
+	(No symbol) [0x00007FF73B330998]
+	(No symbol) [0x00007FF73B333A0C]
+	(No symbol) [0x00007FF73B333ADF]
+	(No symbol) [0x00007FF73B381A57]
+	(No symbol) [0x00007FF73B380B61]
+	(No symbol) [0x00007FF73B372763]
+	(No symbol) [0x00007FF73B3A737A]
+	(No symbol) [0x00007FF73B371C46]
+	(No symbol) [0x00007FF73B3A7590]
+	(No symbol) [0x00007FF73B3CF39C]
+	(No symbol) [0x00007FF73B3A7153]
+	(No symbol) [0x00007FF73B370421]
+	(No symbol) [0x00007FF73B3711B3]
+	GetHandleVerifier [0x00007FF73B85D74D+3223469]
+	GetHandleVerifier [0x00007FF73B857CF2+3200338]
+	GetHandleVerifier [0x00007FF73B875B23+3322755]
+	GetHandleVerifier [0x00007FF73B576A3A+180890]
+	GetHandleVerifier [0x00007FF73B57E13F+211359]
+	GetHandleVerifier [0x00007FF73B5652B4+109332]
+	GetHandleVerifier [0x00007FF73B565462+109762]
+	GetHandleVerifier [0x00007FF73B54BA79+4825]
+	BaseThreadInitThunk [0x00007FFCE3157374+20]
+	RtlUserThreadStart [0x00007FFCE3B7CC91+33]
+
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[FALHA] Erro ao enviar para Achadinhos da Lili 002: module 'time' has no attribute 'wait'
+[FALHA] Erro ao enviar para Achadinhos da Lili 002: module 'time' has no attribute 'wait'
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002

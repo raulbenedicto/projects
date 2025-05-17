@@ -1,28 +1,25 @@
 import time
 import os
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from config import WHATSAPP_GRUPOS, TEMPO_ENTRE_MENSAGENS
 
-# Criar pasta de logs, se necessário
 os.makedirs("logs", exist_ok=True)
 
 def esperar_whatsapp_web(driver):
     try:
         print("[INFO] Aguardando carregamento do WhatsApp Web...")
-
-        WebDriverWait(driver, 180).until(
+        WebDriverWait(driver, 60).until(
             EC.presence_of_element_located((By.XPATH, '//div[@contenteditable="true"][@data-tab="3"]'))
         )
-
         print("[OK] WhatsApp Web carregado com sucesso.")
     except Exception as e:
-        print(f"[ERRO] Falha ao carregar o WhatsApp Web: {e}")
+        print(f"[ERRO] Timeout ao aguardar WhatsApp Web: {e}")
         driver.save_screenshot("erro_whatsapp.png")
         driver.quit()
         exit()
@@ -30,20 +27,16 @@ def esperar_whatsapp_web(driver):
 def enviar_whatsapp(ofertas):
     log_file = open("logs/whatsapp_log.txt", "a", encoding="utf-8")
 
-    # Perfil de navegador isolado para manter login
+  # Comando para abrir o Chrome com debug ativado e user data dir
+    # Este comando é específico para Windows
+    os.system('start chrome --remote-debugging-port=9222 --user-data-dir="C:\\Users\\Raul\\SeleniumSession"')
+    time.sleep(5) # Dar um tempo para o Chrome abrir antes de tentar conectar
+
     chrome_options = Options()
-    chrome_options.add_argument("--user-data-dir=C:/Users/Raul/SeleniumWhatsAppProfile")
-    chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument("--remote-debugging-port=9222")
-    chrome_options.add_argument("--disable-extensions")
-    chrome_options.add_argument("--disable-popup-blocking")
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--log-level=3")  # Suprime erros não críticos
+    chrome_options.debugger_address = "127.0.0.1:9222"  # Conectar a sessão existente
 
     driver = webdriver.Chrome(options=chrome_options)
-    driver.get('https://web.whatsapp.com')
-
+    driver.get("https://web.whatsapp.com")
     esperar_whatsapp_web(driver)
 
     for oferta in ofertas:
@@ -81,32 +74,39 @@ def enviar_whatsapp(ofertas):
             message_box = WebDriverWait(driver, 30).until(
                 EC.presence_of_element_located((By.XPATH, '//div[@contenteditable="true"][@data-tab="10"]'))
             )
-            print("[DEBUG] Campo de mensagem localizado com sucesso.")
+            print("[DEBUG] Campo de mensagem localizado.")
 
             driver.execute_script("arguments[0].focus();", message_box)
             message_box.click()
-            time.sleep(1)
 
-            # Envio linha a linha com SHIFT+ENTER
+            # ✅ Espera 6 segundos antes de começar a digitar
+            print("[INFO] Esperando 2 segundos antes de digitar...")
+            time.sleep(2)
+
+            # Digita mensagem linha por linha com SHIFT+ENTER
             actions = ActionChains(driver)
             for line in mensagem.split('\n'):
                 actions.send_keys(line)
                 actions.key_down(Keys.SHIFT).send_keys(Keys.ENTER).key_up(Keys.SHIFT)
-            actions.send_keys(Keys.ENTER)
             actions.perform()
 
-            msg_ok = f"[OK] Mensagem enviada para o grupo: {grupo}\n"
+            # ✅ Espera 4 segundos após digitar, antes de enviar
+            print("[INFO] Aguardando alguns segundos antes de enviar...")
+            time.sleep(TEMPO_ENTRE_MENSAGENS)
+
+            # Envia a mensagem
+            message_box.send_keys(Keys.ENTER)
+
+            msg_ok = f"[OK] Mensagem enviada para: {grupo}\n"
             print(msg_ok)
             log_file.write(msg_ok)
 
         except Exception as envio_erro:
-            erro_txt = f"[FALHA] Campo de mensagem não aceitou envio. Erro: {envio_erro}"
+            erro_txt = f"[FALHA] Erro ao enviar para {grupo}: {envio_erro}"
             print(erro_txt)
             log_file.write(erro_txt + "\n")
 
-        time.sleep(TEMPO_ENTRE_MENSAGENS)
+        time.sleep(4)
 
     log_file.close()
-
-    print("\n✅ Processo concluído. O navegador permanecerá aberto para verificação manual.")
-    print("Você pode fechar o Chrome manualmente após revisar.")
+    print("\n✅ Envio concluído. Navegador permanece aberto para conferência.")
