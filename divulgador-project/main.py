@@ -1,37 +1,45 @@
 import csv
 import os
+import sys
+import gdown
 from telegram_bot import enviar_telegram
 from whatsapp_bot import enviar_whatsapp
 
+# ID do arquivo no Google Drive (caso use)
+ARQUIVO_ID = '1ABCdEFGhIJKlmnOPQRsTuvWXyZ'  # Substitua pelo seu ID real
+
+def baixar_ofertas_do_drive():
+    url = f"https://drive.google.com/uc?id={ARQUIVO_ID}"
+    output = "ofertas.csv"
+    if not os.path.exists(output):
+        print("[INFO] Baixando ofertas.csv do Google Drive...")
+        gdown.download(url, output, quiet=False)
+        print("[OK] Download concluído.")
+
 def carregar_ofertas():
-    try:
-        with open('ofertas.csv', newline='', encoding='utf-8') as f:
-            return list(csv.DictReader(f))
-    except FileNotFoundError:
-        print("[ERRO] Arquivo ofertas.csv não encontrado.")
-        exit()
+    with open('ofertas.csv', newline='', encoding='utf-8') as f:
+        return list(csv.DictReader(f))
 
 def main():
-    print("=== DIVULGADOR DE OFERTAS ===")
-    
-    # Etapa 1 – Carregar ofertas
+    # opcional: baixar_ofertas_do_drive()
+
     ofertas = carregar_ofertas()
 
-    # Etapa 2 – Escolha do canal
-    print("1 - Enviar para Telegram")
-    print("2 - Enviar para WhatsApp")
-    print("3 - Enviar para ambos")
-    escolha = input("Escolha a opção: ")
+    if len(sys.argv) < 2:
+        print("Uso: python main.py [telegram|whatsapp|ambos]")
+        return
 
-    if escolha == '1':
+    escolha = sys.argv[1].lower()
+
+    if escolha == 'telegram':
         enviar_telegram(ofertas)
-    elif escolha == '2':
+    elif escolha == 'whatsapp':
         enviar_whatsapp(ofertas)
-    elif escolha == '3':
+    elif escolha == 'ambos':
         enviar_telegram(ofertas)
         enviar_whatsapp(ofertas)
     else:
-        print("Opção inválida.")
+        print("Opção inválida. Use: telegram | whatsapp | ambos")
 
 if __name__ == '__main__':
     main()

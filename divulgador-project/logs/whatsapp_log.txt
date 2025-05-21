@@ -281,3 +281,5 @@ Stacktrace:
 [OK] Mensagem enviada para: Achadinhos da Lili 002
 [OK] Mensagem enviada para: Achadinhos da Lili 002
 [OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
+[OK] Mensagem enviada para: Achadinhos da Lili 002
