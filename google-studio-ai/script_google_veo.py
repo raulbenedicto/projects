@@ -1,4 +1,3 @@
-GOOGLE_API_KEY="AIzaSyABVbYCMUnxgWFSXssLTyN2VdjsY7aGXcY"
 
 import os
 import time
