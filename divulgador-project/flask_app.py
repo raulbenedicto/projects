@@ -1,69 +1,38 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
-import csv
-import subprocess
+# Importa a classe Flask do pacote flask
+from flask import Flask, request, jsonify
+# Importa a função processar_ofertas do módulo main
+from main import processar_ofertas
+# Importa a função carregar_configuracoes do módulo config
+from config import carregar_configuracoes
 
+# Cria uma instância da aplicação Flask
 app = Flask(__name__)
-app.secret_key = 'segredo123'  # Requerido para mensagens flash
 
-CSV_FILE = 'ofertas.csv'
+# Carrega as configurações da aplicação
+config = carregar_configuracoes()
 
-def read_csv():
-    with open(CSV_FILE, newline='', encoding='utf-8') as f:
-        return list(csv.DictReader(f))
-
-def write_csv(data):
-    with open(CSV_FILE, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=['produto', 'preco', 'descricao', 'grupo', 'canal'])
-        writer.writeheader()
-        writer.writerows(data)
-
-@app.route('/')
+# Define a rota inicial ('/') que aceita requisições GET e POST
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    ofertas = read_csv()
-    return render_template('index.html', ofertas=ofertas)
+    # Verifica se a requisição é do tipo POST
+    if request.method == 'POST':
+        # Obtém os dados JSON enviados na requisição
+        data = request.get_json()
+        # Extrai o caminho do arquivo de ofertas dos dados recebidos, usando um valor padrão se não for fornecido
+        caminho_arquivo = data.get('caminho_arquivo', config['caminho_arquivo_ofertas'])
+        # Extrai a lista de canais dos dados recebidos, usando um valor padrão se não for fornecida
+        canais = data.get('canais', config['canais_divulgacao'])
 
-@app.route('/add', methods=['POST'])
-def add():
-    nova = {
-        'produto': request.form['produto'],
-        'preco': request.form['preco'],
-        'descricao': request.form['descricao'],
-        'grupo': request.form['grupo'],
-        'canal': request.form['canal']
-    }
-    data = read_csv()
-    data.append(nova)
-    write_csv(data)
-    return redirect(url_for('index'))
+        # Chama a função processar_ofertas com o caminho do arquivo e a lista de canais
+        processar_ofertas(caminho_arquivo, canais)
 
-@app.route('/delete/<int:index>')
-def delete(index):
-    data = read_csv()
-    data.pop(index)
-    write_csv(data)
-    return redirect(url_for('index'))
-
-@app.route('/update/<int:index>', methods=['POST'])
-def update(index):
-    data = read_csv()
-    data[index] = {
-        'produto': request.form['produto'],
-        'preco': request.form['preco'],
-        'descricao': request.form['descricao'],
-        'grupo': request.form['grupo'],
-        'canal': request.form['canal']
-    }
-    write_csv(data)
-    return redirect(url_for('index'))
-
-@app.route('/disparar/<canal>')
-def disparar(canal):
-    if canal in ['telegram', 'whatsapp', 'ambos']:
-        subprocess.Popen(['python', 'main.py', canal])
-        flash(f'Disparo iniciado com sucesso para: {canal.capitalize()}', 'success')
+        # Retorna uma resposta JSON indicando sucesso
+        return jsonify({"message": "Processamento iniciado!"}), 200
     else:
-        flash('Canal inválido.', 'danger')
-    return redirect(url_for('index'))
+        # Se a requisição for GET, retorna uma mensagem simples
+        return "Bem-vindo ao divulgador de ofertas!"
 
+# Verifica se o script está sendo executado diretamente
 if __name__ == '__main__':
+    # Executa a aplicação Flask em modo debug
     app.run(debug=True)

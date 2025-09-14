@@ -10,3 +10,9 @@ WHATSAPP_GRUPOS = {
 }
 
 TEMPO_ENTRE_MENSAGENS = 10  # segundos
+
+def carregar_configuracoes():
+    return {
+        "caminho_arquivo_ofertas": "ofertas.csv",
+        "canais_divulgacao": ["telegram", "whatsapp"]
+    }
