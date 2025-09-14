@@ -4,6 +4,8 @@ import time
 from google import genai  # Assumindo que esta biblioteca existisse com esta estrutura
 from google.genai import types
 
+GOOGLE_API_KEY = 'adicionar aqui sua chave de API'  # Substitua pela sua chave de API real ou use variáveis de ambiente
+
 
 print(f"Script iniciado em: {timestamp}")
 # --- CORREÇÃO 1: Definir a API Key (ex: a partir de uma variável de ambiente) ---
